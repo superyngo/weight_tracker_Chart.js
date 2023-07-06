@@ -32,7 +32,6 @@ video {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: opacity(0.5);
 }
 
 html {
@@ -46,7 +45,7 @@ html {
 }
 
 .container {
-  background: rgba(255, 0, 0, 0.146);
+  background: rgba(249, 198, 198, 0.844);
   position: absolute;
   inset: 0;
   margin: auto auto;
