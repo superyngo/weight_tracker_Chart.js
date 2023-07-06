@@ -1,0 +1,119 @@
+:root {
+  --list-weight: 150px;
+  --chart-weight: 500px;
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherited;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: opacity(0.5);
+}
+
+html {
+  color-scheme: dark light;
+}
+
+#app {
+  height: 100svh;
+  width: 100svw;
+  position: relative;
+}
+
+.container {
+  background: rgba(255, 0, 0, 0.146);
+  position: absolute;
+  inset: 0;
+  margin: auto auto;
+  width: calc(var(--chart-weight) + var(--list-weight));
+  aspect-ratio: 16/9;
+  display: grid;
+  grid-template-columns: var(--chart-weight) var(--list-weight);
+  grid-template-rows: 100px;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.Listscontainer {
+  font-size: 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+  width: var(--list-weight);
+  /* border: 1px solid black; */
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: self-start;
+}
+.Listscontainer li {
+  padding: 0.4rem 0;
+  list-style: none;
+  position: relative;
+}
+.Listscontainer li:hover {
+  background-color: antiquewhite;
+}
+
+.ChartContainer {
+  padding: 0.5rem;
+  /* border: 1px solid black; */
+  width: var(--chart-weight);
+  aspect-ratio: 16/9;
+}
+
+.inputPanel input {
+  width: 100px;
+}
+
+.remove-btn {
+  all: unset;
+  position: absolute;
+  top: 0.2rem;
+  right: 0;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  all: unset;
+  position: relative;
+  margin: 0 0 0 0.5rem;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  scale: 0.9;
+}
+
+.confirm-btn:active {
+  scale: 1;
+}
+
+button > img {
+  width: 1rem;
+}
