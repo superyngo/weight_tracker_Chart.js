@@ -45,6 +45,9 @@ video {
 html {
   color-scheme: dark light;
 }
+.photoRef {
+  color: black;
+}
 
 #app {
   height: 100svh;
